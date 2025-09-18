@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megha Shopping Mall</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f4f6f7;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1abc9c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    nav h2 {
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #2c3e50;
+      transition: 0.3s;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf") no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .hero button {
+      background: #e67e22;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background: #d35400;
+    }
+
+    /* Products */
+    .products {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .products h2 {
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      background: #1abc9c;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .newsletter h2 {
+      margin-bottom: 15px;
+    }
+
+    .newsletter input {
+      padding: 12px;
+      width: 250px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #2c3e50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background: #34495e;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .socials {
+      margin: 10px 0;
+    }
+
+    .socials a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .socials a:hover {
+      color: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>MeghaMall</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#subscribe">Subscribe</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Megha Shopping Mall</h1>
+    <p>All your favorite brands in one place!</p>
+    <button>Shop Now</button>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2>Featured Categories</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Fashion">
+        <h3>Fashion</h3>
+        <p>Stylish and trendy outfits for all seasons.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab" alt="Electronics">
+        <h3>Electronics</h3>
+        <p>Smart gadgets and devices at the best prices.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" alt="Food">
+        <h3>Food Court</h3>
+        <p>Delicious food and beverages from global cuisines.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589187155478-0ef12539d7d6" alt="Furniture">
+        <h3>Home & Furniture</h3>
+        <p>Beautiful designs to make your home cozy and modern.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="subscribe">
+    <h2>Subscribe for Updates & Offers</h2>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📍 MeghaMall, Main Road, Your City</p>
+    <p>📞 +91 98765 12345 | 📧 contact@megamall.com</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+      <a href="#">🐦</a>
+    </div>
+    <p>&copy; 2025 Megha Shopping Mall | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
